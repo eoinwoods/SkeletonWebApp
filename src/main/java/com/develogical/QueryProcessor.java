@@ -16,6 +16,12 @@ public class QueryProcessor {
       return "Back Row Again";
     }
 
+    if (query.toLowerCase().contains("plus ")) {
+      String[] tokens = query.split(" ");
+        int sum = Integer.parseInt(tokens[2]) + Integer.parseInt(tokens[4]);
+      return Integer.toString(sum);
+    }
+
     return "";
   }
 }

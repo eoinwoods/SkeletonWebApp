@@ -24,4 +24,9 @@ public class QueryProcessorTest {
   public void knowsYourName() throws Exception {
     assertThat(queryProcessor.process("What is your name?"), containsString("Back Row Again"));
   }
+
+  @Test
+  public void canAddTwoNumbers() throws Exception {
+    assertThat(queryProcessor.process("what is 1 plus 2"), containsString("3"));
+  }
 }
