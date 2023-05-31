@@ -17,7 +17,7 @@ public class QueryProcessor {
     }
 
     if (query.toLowerCase().contains("plus ")) {
-      String[] tokens = query.split(" ");
+      String[] tokens = query.replace("?","").split(" ");
         int sum = Integer.parseInt(tokens[2]) + Integer.parseInt(tokens[4]);
       return Integer.toString(sum);
     }

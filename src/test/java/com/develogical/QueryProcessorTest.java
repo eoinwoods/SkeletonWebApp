@@ -27,6 +27,6 @@ public class QueryProcessorTest {
 
   @Test
   public void canAddTwoNumbers() throws Exception {
-    assertThat(queryProcessor.process("what is 1 plus 2"), containsString("3"));
+    assertThat(queryProcessor.process("what is 1 plus 2?"), containsString("3"));
   }
 }
