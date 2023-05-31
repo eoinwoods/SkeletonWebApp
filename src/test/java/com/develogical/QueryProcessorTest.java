@@ -29,4 +29,10 @@ public class QueryProcessorTest {
   public void canAddTwoNumbers() throws Exception {
     assertThat(queryProcessor.process("what is 1 plus 2?"), containsString("3"));
   }
+  //Which of the following numbers is the largest: 56, 86, 87?
+  @Test
+  public void canFindLargestNumber()
+   throws Exception {
+    assertThat(queryProcessor.process("Which of the following numbers is the largest: 56, 86, 87?"), containsString("87"));
+  }
 }
